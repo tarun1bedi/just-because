@@ -104,7 +104,7 @@
             max-width: 500px;
             width: 90%;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         .card::before {
@@ -209,6 +209,7 @@
 
         .btn-no.moving {
             position: absolute;
+            z-index: 9999;
         }
 
         /* Toast Notification */
@@ -485,7 +486,6 @@
 
                 const randomX = Math.max(20, Math.random() * maxX);
                 const randomY = Math.max(20, Math.random() * maxY);
-                const randomZ = 999;
 
                 noBtn.classList.add('moving');
                 noBtn.style.position = 'fixed';
